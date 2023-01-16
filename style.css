@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --text-color: #fff;
+    --font-family: 'Roboto', sans-serif;
+    
+    --bg-color: #121214;
+    
+    --hue: 194;
+    --bg-controls: hsla(var(--hue), 100%, 63%, 0.13);
+    --primary-color: hsla(var(--hue), 100%, 63%);
+
+}
+
+.hide{
+    display: none;
+}
+
+.opacity{
+    opacity: 0;
+}
+
+body{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    background-color: var(--bg-color);
+
+    display: grid;
+    min-height: 100vh;
+}
+
+main{
+    justify-self: center;
+    align-self: end;
+}
+
+#timer{
+    font-size: 8.8rem;
+    display: flex;
+    font-size: clamp(4.4rem, 4rem + 12vw, 8.8rem);
+
+    margin-bottom: 1.6rem;
+}
+
+/* .endTime{
+    margin-top: 1.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+} */
+
+#controls{
+    background-color: var(--bg-controls);
+    border-radius: 9999px;
+
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.play svg path,
+.pouse svg path,
+.sound-on svg path{
+    fill: var(--primary-color);
+}
+
+button svg{
+    width: clamp(3.2rem, 2rem + 8.4vw, 6.4rem);
+}
+
+button{
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+footer{
+    justify-self: end;
+    align-self: end;
+    padding-bottom: clamp(1rem, 4.2vw, 3.2rem);
+    padding-right: clamp(1rem, 5.3vw, 4rem);
+}
